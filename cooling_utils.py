@@ -2,21 +2,51 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 from scipy import stats, constants
-from sklearn.covariance import EllipticEnvelope
+from sklearn.covariance import EllipticEnvelope, MinCovDet
 muonmass = constants.physical_constants['muon mass energy equivalent in MeV'][0]
 
 def clean_6dphasespace(beam_to_clean, contamination_rate):
     algorithm =  EllipticEnvelope(contamination=contamination_rate)
-    X = beam_to_clean.get_phase_space('%x %xp %y %py %t %Pz')
+    X = beam_to_clean.get_phase_space('%x %Px %y %Py %t %Pz')
     algorithm.fit(X)
     y_pred = algorithm.fit(X).predict(X)
-    bunch_filtered = X[np.where(y_pred != -1)[0]]
+    bunch_filtered = beam_to_clean.get_phase_space()[np.where(y_pred != -1)[0]]
+    beam_to_clean.set_phase_space(bunch_filtered)
+    return beam_to_clean
+
+
+def clean_robust_cov(beam):
+    phase_space_emitt = beam.get_phase_space('%x %Px %y %Py %t %Pz') # %t %E') 
+    # estimate robust covariance
+    cov6d = MinCovDet(random_state=0, assume_centered=False).fit(phase_space_emitt)
+    cleaned_phase_space_6d = beam.get_phase_space()[np.where(cov6d.support_ == True)]
+    beam.set_phase_space(cleaned_phase_space_6d)
+    return  beam
+
+
+def clean_4dphasespace(beam_to_clean, contamination_rate):
+    algorithm =  EllipticEnvelope(contamination=contamination_rate)
+    ps6d = beam_to_clean.get_phase_space()
+    X = beam_to_clean.get_phase_space('%x %Px %y %Py')
+    algorithm.fit(X)
+    y_pred = algorithm.fit(X).predict(X)
+    bunch_filtered = ps6d[np.where(y_pred != -1)[0]]
+    beam_to_clean.set_phase_space(bunch_filtered)
+    return beam_to_clean
+
+
+def clean_LongPhasespace(beam_to_clean, contamination_rate):
+    algorithm =  EllipticEnvelope(contamination=contamination_rate)
+    X = beam_to_clean.get_phase_space('%t %Pz')
+    algorithm.fit(X)
+    y_pred = algorithm.fit(X).predict(X)
+    bunch_filtered = beam_to_clean.get_phase_space()[np.where(y_pred != -1)[0]]
     beam_to_clean.set_phase_space(bunch_filtered)
     return beam_to_clean
 
 
 def sigma_cut(final_beam, sigma_cut, plot=False):
-    final_beam_phase_space = final_beam.get_phase_space('%x %xp %y %py %t %Pz')
+    final_beam_phase_space = final_beam.get_phase_space('%x %Px %y %Py %t %Pz')
     final_phase_space_df = pd.DataFrame(final_beam_phase_space,
                     columns=['X', 'Px', 'Y', 'Py', 't', 'Pt'])
     cut_final_idx = final_phase_space_df.index[
@@ -40,7 +70,7 @@ def sigma_cut(final_beam, sigma_cut, plot=False):
         plt.legend()
         plt.tight_layout()
         plt.show()
-    final_beam.set_phase_space(final_beam_phase_space[cut_final_idx])
+    final_beam.set_phase_space(final_beam.get_phase_space()[cut_final_idx])
     return final_beam
 
 
