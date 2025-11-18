@@ -1,7 +1,7 @@
 # Final Cooling Lattice
 R. Taylor
 
-![Preview](PerformanceOveriew_Diagram.png)
+![Preview](PerformanceOverview_Diagram.png)
 
 Performance Table
 
