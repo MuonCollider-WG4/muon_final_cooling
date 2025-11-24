@@ -200,185 +200,185 @@ place MU2 z=1600.0
 solenoid MU3 coil=M_C current=51.652979865357764 color=1,0,1,1
 place MU3 z=1900.0000000000005
                 
-solenoid MD1_1 coil=M_C current=35.55470636454108 color=1,0,1,1
+solenoid MD1_1 coil=M_C current=35.508740647947036 color=1,0,1,1
 place MD1_1 z=3889.3626900000004
-solenoid MD1_2 coil=M_C current=-7.714913233385411 color=1,0,1,1
+solenoid MD1_2 coil=M_C current=-7.775637580448505 color=1,0,1,1
 place MD1_2 z=4439.36269
-solenoid MD1_3 coil=M_C current=-12.156076060789367 color=1,0,1,1
+solenoid MD1_3 coil=M_C current=-12.148933874280392 color=1,0,1,1
 place MD1_3 z=4989.36269
-solenoid MD1_4 coil=M_C current=1.133482690686205 color=1,0,1,1
+solenoid MD1_4 coil=M_C current=1.1659173138855703 color=1,0,1,1
 place MD1_4 z=5539.362689999999
-solenoid MD1_5 coil=M_C current=-14.187088385541237 color=1,0,1,1
+solenoid MD1_5 coil=M_C current=-14.173355652807334 color=1,0,1,1
 place MD1_5 z=6089.36269
-solenoid MD1_6 coil=M_C current=3.217357139829867 color=1,0,1,1
+solenoid MD1_6 coil=M_C current=3.1998081438712456 color=1,0,1,1
 place MD1_6 z=6639.362690000001
-solenoid MD1_7 coil=M_C current=2.380066880687452 color=1,0,1,1
+solenoid MD1_7 coil=M_C current=2.3815554497724882 color=1,0,1,1
 place MD1_7 z=7189.36269
-solenoid MD1_8 coil=M_C current=-9.359177003821042 color=1,0,1,1
+solenoid MD1_8 coil=M_C current=-9.459754369901425 color=1,0,1,1
 place MD1_8 z=7739.36269
-solenoid MD1_9 coil=M_C current=24.372804495019043 color=1,0,1,1
+solenoid MD1_9 coil=M_C current=24.349408687342134 color=1,0,1,1
 place MD1_9 z=8289.36269
-solenoid MD1_10 coil=M_C current=-45.58111522673747 color=1,0,1,1
+solenoid MD1_10 coil=M_C current=-45.67855729411018 color=1,0,1,1
 place MD1_10 z=8839.36269
-solenoid MD2_1 coil=M_C current=-28.187601110471846 color=1,0,1,1
+solenoid MD2_1 coil=M_C current=-28.31789277065613 color=1,0,1,1
 place MD2_1 z=10876.547379999996
-solenoid MD2_2 coil=M_C current=-18.619474712553746 color=1,0,1,1
+solenoid MD2_2 coil=M_C current=-18.501887818005812 color=1,0,1,1
 place MD2_2 z=11426.547379999995
-solenoid MD2_3 coil=M_C current=-1.88296255838488 color=1,0,1,1
+solenoid MD2_3 coil=M_C current=-1.8784318575656016 color=1,0,1,1
 place MD2_3 z=11976.547379999996
-solenoid MD2_4 coil=M_C current=-0.732059269659518 color=1,0,1,1
+solenoid MD2_4 coil=M_C current=-0.7270962827746912 color=1,0,1,1
 place MD2_4 z=12526.547379999996
-solenoid MD2_5 coil=M_C current=-18.055271210920743 color=1,0,1,1
+solenoid MD2_5 coil=M_C current=-18.06964647404582 color=1,0,1,1
 place MD2_5 z=13076.547379999998
-solenoid MD2_6 coil=M_C current=-8.552189734765216 color=1,0,1,1
+solenoid MD2_6 coil=M_C current=-8.53553912519761 color=1,0,1,1
 place MD2_6 z=13626.547379999996
-solenoid MD2_7 coil=M_C current=0.0009332300078215611 color=1,0,1,1
+solenoid MD2_7 coil=M_C current=0.0009505872611441622 color=1,0,1,1
 place MD2_7 z=14176.547379999996
-solenoid MD2_8 coil=M_C current=9.245378144043869 color=1,0,1,1
+solenoid MD2_8 coil=M_C current=9.413088307598954 color=1,0,1,1
 place MD2_8 z=14726.547379999996
-solenoid MD2_9 coil=M_C current=20.237624202250746 color=1,0,1,1
+solenoid MD2_9 coil=M_C current=20.368889231178734 color=1,0,1,1
 place MD2_9 z=15276.547379999996
-solenoid MD2_10 coil=M_C current=29.438745319820953 color=1,0,1,1
+solenoid MD2_10 coil=M_C current=29.575276718397387 color=1,0,1,1
 place MD2_10 z=15826.547379999998
-solenoid MD3_1 coil=M_C current=20.598423250044917 color=1,0,1,1
+solenoid MD3_1 coil=M_C current=20.850624369473344 color=1,0,1,1
 place MD3_1 z=17643.765200000005
-solenoid MD3_2 coil=M_C current=12.259154561609357 color=1,0,1,1
+solenoid MD3_2 coil=M_C current=12.413159406555176 color=1,0,1,1
 place MD3_2 z=18193.765200000005
-solenoid MD3_3 coil=M_C current=-11.028039525976725 color=1,0,1,1
+solenoid MD3_3 coil=M_C current=-11.020477105084112 color=1,0,1,1
 place MD3_3 z=18743.7652
-solenoid MD3_4 coil=M_C current=-4.505904748603031 color=1,0,1,1
+solenoid MD3_4 coil=M_C current=-4.4959745919857355 color=1,0,1,1
 place MD3_4 z=19293.765200000005
-solenoid MD3_5 coil=M_C current=-1.2220262529247803 color=1,0,1,1
+solenoid MD3_5 coil=M_C current=-1.2261645525741547 color=1,0,1,1
 place MD3_5 z=19843.765200000005
-solenoid MD3_6 coil=M_C current=-8.01468079387589 color=1,0,1,1
+solenoid MD3_6 coil=M_C current=-7.944903700775784 color=1,0,1,1
 place MD3_6 z=20393.765200000005
-solenoid MD3_7 coil=M_C current=-0.021815409042130016 color=1,0,1,1
+solenoid MD3_7 coil=M_C current=-0.02232899339689541 color=1,0,1,1
 place MD3_7 z=20943.765200000005
-solenoid MD3_8 coil=M_C current=11.21581321796549 color=1,0,1,1
+solenoid MD3_8 coil=M_C current=11.214227282445574 color=1,0,1,1
 place MD3_8 z=21493.7652
-solenoid MD3_9 coil=M_C current=-15.673297467902362 color=1,0,1,1
+solenoid MD3_9 coil=M_C current=-15.610248028781658 color=1,0,1,1
 place MD3_9 z=22043.765200000005
-solenoid MD3_10 coil=M_C current=-25.020056983426315 color=1,0,1,1
+solenoid MD3_10 coil=M_C current=-24.94776206574598 color=1,0,1,1
 place MD3_10 z=22593.765200000005
-solenoid MD4_1 coil=M_C current=-30.271160289376684 color=1,0,1,1
+solenoid MD4_1 coil=M_C current=-30.10777573536053 color=1,0,1,1
 place MD4_1 z=24443.746580000014
-solenoid MD4_2 coil=M_C current=16.7162166702538 color=1,0,1,1
+solenoid MD4_2 coil=M_C current=16.754070695307373 color=1,0,1,1
 place MD4_2 z=24993.746580000014
-solenoid MD4_3 coil=M_C current=-11.895055276425104 color=1,0,1,1
+solenoid MD4_3 coil=M_C current=-11.847294928772918 color=1,0,1,1
 place MD4_3 z=25543.74658000001
-solenoid MD4_4 coil=M_C current=9.900864301412316 color=1,0,1,1
+solenoid MD4_4 coil=M_C current=9.937535310012745 color=1,0,1,1
 place MD4_4 z=26093.746580000014
-solenoid MD4_5 coil=M_C current=-7.271840882709399 color=1,0,1,1
+solenoid MD4_5 coil=M_C current=-7.382114373194557 color=1,0,1,1
 place MD4_5 z=26643.746580000014
-solenoid MD4_6 coil=M_C current=8.557791755891529 color=1,0,1,1
+solenoid MD4_6 coil=M_C current=8.695539334740689 color=1,0,1,1
 place MD4_6 z=27193.746580000014
-solenoid MD4_7 coil=M_C current=13.504925911188568 color=1,0,1,1
+solenoid MD4_7 coil=M_C current=13.679726322160738 color=1,0,1,1
 place MD4_7 z=27743.74658000001
-solenoid MD4_8 coil=M_C current=17.126141448005676 color=1,0,1,1
+solenoid MD4_8 coil=M_C current=17.198860048441876 color=1,0,1,1
 place MD4_8 z=28293.74658000001
-solenoid MD4_9 coil=M_C current=18.49360236859891 color=1,0,1,1
+solenoid MD4_9 coil=M_C current=18.27987415942097 color=1,0,1,1
 place MD4_9 z=28843.746580000014
-solenoid MD4_10 coil=M_C current=32.32766499258529 color=1,0,1,1
+solenoid MD4_10 coil=M_C current=32.30642320204957 color=1,0,1,1
 place MD4_10 z=29393.746580000014
-solenoid MD5_1 coil=M_C current=11.171110839344848 color=1,0,1,1
+solenoid MD5_1 coil=M_C current=11.343974014339874 color=1,0,1,1
 place MD5_1 z=30921.499400000022
-solenoid MD5_2 coil=M_C current=12.39738379571258 color=1,0,1,1
+solenoid MD5_2 coil=M_C current=12.336638733666955 color=1,0,1,1
 place MD5_2 z=31471.499400000022
-solenoid MD5_3 coil=M_C current=-6.998328594341236 color=1,0,1,1
+solenoid MD5_3 coil=M_C current=-7.14255313126038 color=1,0,1,1
 place MD5_3 z=32021.49940000002
-solenoid MD5_4 coil=M_C current=0.7468950186575559 color=1,0,1,1
+solenoid MD5_4 coil=M_C current=0.765784357408995 color=1,0,1,1
 place MD5_4 z=32571.499400000022
-solenoid MD5_5 coil=M_C current=-1.3094154077092988 color=1,0,1,1
+solenoid MD5_5 coil=M_C current=-1.312317853070624 color=1,0,1,1
 place MD5_5 z=33121.49940000002
-solenoid MD5_6 coil=M_C current=7.096162643751539 color=1,0,1,1
+solenoid MD5_6 coil=M_C current=7.019639246966744 color=1,0,1,1
 place MD5_6 z=33671.49940000002
-solenoid MD5_7 coil=M_C current=1.132188922434195 color=1,0,1,1
+solenoid MD5_7 coil=M_C current=1.127414852195843 color=1,0,1,1
 place MD5_7 z=34221.49940000003
-solenoid MD5_8 coil=M_C current=11.514386425978117 color=1,0,1,1
+solenoid MD5_8 coil=M_C current=11.369090082700511 color=1,0,1,1
 place MD5_8 z=34771.49940000002
-solenoid MD5_9 coil=M_C current=-8.09504290515725 color=1,0,1,1
+solenoid MD5_9 coil=M_C current=-8.053117866227542 color=1,0,1,1
 place MD5_9 z=35321.49940000002
-solenoid MD5_10 coil=M_C current=-20.839421282985928 color=1,0,1,1
+solenoid MD5_10 coil=M_C current=-21.067312426060433 color=1,0,1,1
 place MD5_10 z=35871.49940000002
-solenoid MD6_1 coil=M_C current=-21.380022970156226 color=1,0,1,1
+solenoid MD6_1 coil=M_C current=-21.49148506645938 color=1,0,1,1
 place MD6_1 z=37020.066230000026
-solenoid MD6_2 coil=M_C current=-15.040473873023592 color=1,0,1,1
+solenoid MD6_2 coil=M_C current=-15.017781723049705 color=1,0,1,1
 place MD6_2 z=37570.06623000003
-solenoid MD6_3 coil=M_C current=14.33214318862839 color=1,0,1,1
+solenoid MD6_3 coil=M_C current=14.406865606476686 color=1,0,1,1
 place MD6_3 z=38120.066230000026
-solenoid MD6_4 coil=M_C current=18.59756579652091 color=1,0,1,1
+solenoid MD6_4 coil=M_C current=18.694530436181793 color=1,0,1,1
 place MD6_4 z=38670.066230000026
-solenoid MD6_5 coil=M_C current=-16.099269207560155 color=1,0,1,1
+solenoid MD6_5 coil=M_C current=-16.102623903649572 color=1,0,1,1
 place MD6_5 z=39220.06623000002
-solenoid MD6_6 coil=M_C current=-7.911082676842046 color=1,0,1,1
+solenoid MD6_6 coil=M_C current=-7.952328947438012 color=1,0,1,1
 place MD6_6 z=39770.066230000026
-solenoid MD6_7 coil=M_C current=12.518244109357955 color=1,0,1,1
+solenoid MD6_7 coil=M_C current=12.561827306816 color=1,0,1,1
 place MD6_7 z=40320.06623000003
-solenoid MD6_8 coil=M_C current=-7.969912190543052 color=1,0,1,1
+solenoid MD6_8 coil=M_C current=-8.000509582115589 color=1,0,1,1
 place MD6_8 z=40870.066230000026
-solenoid MD6_9 coil=M_C current=17.470567189128495 color=1,0,1,1
+solenoid MD6_9 coil=M_C current=17.426440855050668 color=1,0,1,1
 place MD6_9 z=41420.066230000026
-solenoid MD6_10 coil=M_C current=27.487654151329394 color=1,0,1,1
+solenoid MD6_10 coil=M_C current=27.430956877734616 color=1,0,1,1
 place MD6_10 z=41970.06623000002
-solenoid MD7_1 coil=M_C current=29.800266419682615 color=1,0,1,1
+solenoid MD7_1 coil=M_C current=29.792987462002387 color=1,0,1,1
 place MD7_1 z=42984.48537000004
-solenoid MD7_2 coil=M_C current=-12.683493393608124 color=1,0,1,1
+solenoid MD7_2 coil=M_C current=-12.763595718600296 color=1,0,1,1
 place MD7_2 z=43534.48537000004
-solenoid MD7_3 coil=M_C current=-30.005117884073194 color=1,0,1,1
+solenoid MD7_3 coil=M_C current=-28.990955354902574 color=1,0,1,1
 place MD7_3 z=44084.48537000004
-solenoid MD7_4 coil=M_C current=10.655078317769004 color=1,0,1,1
+solenoid MD7_4 coil=M_C current=10.769888120436011 color=1,0,1,1
 place MD7_4 z=44634.48537000004
-solenoid MD7_5 coil=M_C current=-6.333983873637582 color=1,0,1,1
+solenoid MD7_5 coil=M_C current=-6.448759848624242 color=1,0,1,1
 place MD7_5 z=45184.48537000003
-solenoid MD7_6 coil=M_C current=-5.040016582102763 color=1,0,1,1
+solenoid MD7_6 coil=M_C current=-5.185552678204381 color=1,0,1,1
 place MD7_6 z=45734.48537000004
-solenoid MD7_7 coil=M_C current=-14.647777399703038 color=1,0,1,1
+solenoid MD7_7 coil=M_C current=-14.743813821719531 color=1,0,1,1
 place MD7_7 z=46284.48537000004
-solenoid MD7_8 coil=M_C current=11.5195769202467 color=1,0,1,1
+solenoid MD7_8 coil=M_C current=11.217477407701237 color=1,0,1,1
 place MD7_8 z=46834.48537000004
-solenoid MD7_9 coil=M_C current=-9.742530140218632 color=1,0,1,1
+solenoid MD7_9 coil=M_C current=-9.595475068755617 color=1,0,1,1
 place MD7_9 z=47384.48537000004
-solenoid MD7_10 coil=M_C current=-29.984974525820782 color=1,0,1,1
+solenoid MD7_10 coil=M_C current=-30.409549227155907 color=1,0,1,1
 place MD7_10 z=47934.48537000003
-solenoid MD8_1 coil=M_C current=-28.187601110471846 color=1,0,1,1
+solenoid MD8_1 coil=M_C current=-22.053040769011826 color=1,0,1,1
 place MD8_1 z=48750.97044000005
-solenoid MD8_2 coil=M_C current=-18.619474712553746 color=1,0,1,1
+solenoid MD8_2 coil=M_C current=-15.389054394144107 color=1,0,1,1
 place MD8_2 z=49300.97044000005
-solenoid MD8_3 coil=M_C current=-1.88296255838488 color=1,0,1,1
+solenoid MD8_3 coil=M_C current=13.418263668885078 color=1,0,1,1
 place MD8_3 z=49850.97044000005
-solenoid MD8_4 coil=M_C current=-0.732059269659518 color=1,0,1,1
+solenoid MD8_4 coil=M_C current=19.058865525103563 color=1,0,1,1
 place MD8_4 z=50400.97044000004
-solenoid MD8_5 coil=M_C current=-18.055271210920743 color=1,0,1,1
+solenoid MD8_5 coil=M_C current=-14.513990372251277 color=1,0,1,1
 place MD8_5 z=50950.97044000004
-solenoid MD8_6 coil=M_C current=-8.552189734765216 color=1,0,1,1
+solenoid MD8_6 coil=M_C current=-8.22610135643363 color=1,0,1,1
 place MD8_6 z=51500.97044000005
-solenoid MD8_7 coil=M_C current=0.0009332300078215611 color=1,0,1,1
+solenoid MD8_7 coil=M_C current=11.561728700959243 color=1,0,1,1
 place MD8_7 z=52050.97044000005
-solenoid MD8_8 coil=M_C current=9.245378144043869 color=1,0,1,1
+solenoid MD8_8 coil=M_C current=-8.41556114530449 color=1,0,1,1
 place MD8_8 z=52600.97044000005
-solenoid MD8_9 coil=M_C current=20.237624202250746 color=1,0,1,1
+solenoid MD8_9 coil=M_C current=18.02540058315934 color=1,0,1,1
 place MD8_9 z=53150.97044000004
-solenoid MD8_10 coil=M_C current=29.438745319820953 color=1,0,1,1
+solenoid MD8_10 coil=M_C current=28.403136256583092 color=1,0,1,1
 place MD8_10 z=53700.97044000004
-solenoid MD9_1 coil=M_C current=20.598423250044917 color=1,0,1,1
+solenoid MD9_1 coil=M_C current=24.90996132453933 color=1,0,1,1
 place MD9_1 z=54532.173280000046
-solenoid MD9_2 coil=M_C current=12.259154561609357 color=1,0,1,1
+solenoid MD9_2 coil=M_C current=-10.12802897056051 color=1,0,1,1
 place MD9_2 z=55082.173280000046
-solenoid MD9_3 coil=M_C current=-11.028039525976725 color=1,0,1,1
+solenoid MD9_3 coil=M_C current=-30.352135584470346 color=1,0,1,1
 place MD9_3 z=55632.173280000046
-solenoid MD9_4 coil=M_C current=-4.505904748603031 color=1,0,1,1
+solenoid MD9_4 coil=M_C current=8.86821549314558 color=1,0,1,1
 place MD9_4 z=56182.173280000046
-solenoid MD9_5 coil=M_C current=-1.2220262529247803 color=1,0,1,1
+solenoid MD9_5 coil=M_C current=-8.077319330293964 color=1,0,1,1
 place MD9_5 z=56732.17328000004
-solenoid MD9_6 coil=M_C current=-8.01468079387589 color=1,0,1,1
+solenoid MD9_6 coil=M_C current=-6.019592753431176 color=1,0,1,1
 place MD9_6 z=57282.173280000046
-solenoid MD9_7 coil=M_C current=-0.021815409042130016 color=1,0,1,1
+solenoid MD9_7 coil=M_C current=-13.850729144435995 color=1,0,1,1
 place MD9_7 z=57832.173280000046
-solenoid MD9_8 coil=M_C current=11.21581321796549 color=1,0,1,1
+solenoid MD9_8 coil=M_C current=15.243303750935036 color=1,0,1,1
 place MD9_8 z=58382.173280000046
-solenoid MD9_9 coil=M_C current=-15.673297467902362 color=1,0,1,1
+solenoid MD9_9 coil=M_C current=-4.801301343959765 color=1,0,1,1
 place MD9_9 z=58932.173280000046
-solenoid MD9_10 coil=M_C current=-25.020056983426315 color=1,0,1,1
+solenoid MD9_10 coil=M_C current=-31.23911694442866 color=1,0,1,1
 place MD9_10 z=59482.17328000004
                 
 pillbox rf1_1 innerLength=250  maxGradient=19 frequency=0.05 innerRadius=160 phaseAcc=0 timeOffset=20.9627 win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
