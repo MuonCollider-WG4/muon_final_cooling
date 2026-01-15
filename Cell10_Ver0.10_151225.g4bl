@@ -1,0 +1,562 @@
+output g4bl_log.txt
+g4ui when=4 "/vis/viewer/set/background 1 1 1"
+param disable=Decay   #Whether muons decay
+param stochastics=1
+physics QGSP_BIC disable=$disable
+param cell_end=62185.183050000036
+param zstep=50
+
+### Low Field
+coil L1_C innerRadius=100 outerRadius=300 length=1000.0 nSheets=3 tolerance=1 maxZ=7000
+
+### High Field
+coil Hcorr1_C innerRadius=30 outerRadius=135 length=12 nSheets=3 tolerance=1 maxZ=7000
+coil Hcorr2_C innerRadius=30 outerRadius=125 length=12 nSheets=3 tolerance=1 maxZ=7000
+coil Hcorr3_C innerRadius=30 outerRadius=115 length=12 nSheets=3 tolerance=1 maxZ=7000
+
+# Matchers
+coil M_C innerRadius=100 outerRadius=300.0 length=200.0 nSheets=10 tolerance=1 maxZ=7000
+
+solenoid L1 coil=L1_C current=17.0 color=0.929,0.616,0.035,1
+place L1 z=0
+solenoid L2 coil=L1_C current=-1.865951743945862 color=0.929,0.616,0.035,1
+place L2 z=62185.183050000036
+tube abs0 length=1277.36269 material=LH2 innerRadius=0 outerRadius=25 color=1,1,1,1
+place abs0 z=2894.68
+tube abs1 length=1325.18469 material=LH2 innerRadius=0 outerRadius=25 color=1,1,1,1
+place abs1 z=9857.96
+tube abs2 length=1105.21782 material=LH2 innerRadius=0 outerRadius=25 color=1,1,1,1
+place abs2 z=16735.16
+tube abs3 length=1137.98138 material=LH2 innerRadius=0 outerRadius=25 color=1,1,1,1
+place abs3 z=23518.76
+tube abs4 length=815.75282 material=LH2 innerRadius=0 outerRadius=25 color=1,1,1,1
+place abs4 z=30157.62
+tube abs5 length=436.56683000000004 material=LH2 innerRadius=0 outerRadius=25 color=1,1,1,1
+place abs5 z=36445.78
+tube abs6 length=302.41913999999997 material=LH2 innerRadius=0 outerRadius=25 color=1,1,1,1
+place abs6 z=42477.28
+tube abs7 length=104.48507 material=LH2 innerRadius=0 outerRadius=25 color=1,1,1,1
+place abs7 z=48342.73
+tube abs8 length=119.20284000000001 material=LH2 innerRadius=0 outerRadius=25 color=1,1,1,1
+place abs8 z=54116.57
+tube abs9 length=91.00977 material=LH2 innerRadius=0 outerRadius=25 color=1,1,1,1
+place abs9 z=59883.68
+                
+coil H1_C innerRadius=30 outerRadius=90 length=1517.36269 nSheets=3 tolerance=1 maxZ=7000
+coil H2_C innerRadius=30 outerRadius=90 length=1565.18469 nSheets=3 tolerance=1 maxZ=7000
+coil H3_C innerRadius=30 outerRadius=90 length=1345.21782 nSheets=3 tolerance=1 maxZ=7000
+coil H4_C innerRadius=30 outerRadius=90 length=1377.98138 nSheets=3 tolerance=1 maxZ=7000
+coil H5_C innerRadius=30 outerRadius=90 length=1055.75282 nSheets=3 tolerance=1 maxZ=7000
+coil H6_C innerRadius=30 outerRadius=90 length=676.5668300000001 nSheets=3 tolerance=1 maxZ=7000
+coil H7_C innerRadius=30 outerRadius=90 length=542.41914 nSheets=3 tolerance=1 maxZ=7000
+coil H8_C innerRadius=30 outerRadius=90 length=344.48507 nSheets=3 tolerance=1 maxZ=7000
+coil H9_C innerRadius=30 outerRadius=90 length=359.20284000000004 nSheets=3 tolerance=1 maxZ=7000
+coil H10_C innerRadius=30 outerRadius=90 length=331.00977 nSheets=3 tolerance=1 maxZ=7000
+                
+solenoid H1 coil=H1_C current=535.3 color=1,0,0,0.5
+place H1 z=2894.6813450000004
+solenoid H2 coil=H2_C current=-535.3 color=0,0,1,0.5
+place H2 z=9857.955034999997
+solenoid H3 coil=H3_C current=535.3 color=1,0,0,0.5
+place H3 z=16735.15629
+solenoid H4 coil=H4_C current=-535.3 color=0,0,1,0.5
+place H4 z=23518.755890000008
+solenoid H5 coil=H5_C current=535.3 color=1,0,0,0.5
+place H5 z=30157.622990000018
+solenoid H6 coil=H6_C current=-535.3 color=0,0,1,0.5
+place H6 z=36445.78281500002
+solenoid H7 coil=H7_C current=535.3 color=1,0,0,0.5
+place H7 z=42477.27580000003
+solenoid H8 coil=H8_C current=-535.3 color=0,0,1,0.5
+place H8 z=48342.727905000036
+solenoid H9 coil=H9_C current=535.3 color=1,0,0,0.5
+place H9 z=54116.57186000004
+solenoid H10 coil=H10_C current=-535.3 color=0,0,1,0.5
+place H10 z=59883.67816500004
+                
+solenoid H1corr1_U coil=Hcorr1_C current=535.3 color=1,0,0,0.5
+place H1corr1_U z=2106.0000000000005
+solenoid H1corr2_U coil=Hcorr2_C current=535.3 color=1,0,0,0.5
+place H1corr2_U z=2118.0000000000005
+solenoid H1corr3_U coil=Hcorr3_C current=535.3 color=1,0,0,0.5
+place H1corr3_U z=2130.0000000000005
+solenoid H2corr1_U coil=Hcorr1_C current=-535.3 color=0,0,1,0.5
+place H2corr1_U z=9045.362689999998
+solenoid H2corr2_U coil=Hcorr2_C current=-535.3 color=0,0,1,0.5
+place H2corr2_U z=9057.362689999998
+solenoid H2corr3_U coil=Hcorr3_C current=-535.3 color=0,0,1,0.5
+place H2corr3_U z=9069.362689999998
+solenoid H3corr1_U coil=Hcorr1_C current=535.3 color=1,0,0,0.5
+place H3corr1_U z=16032.54738
+solenoid H3corr2_U coil=Hcorr2_C current=535.3 color=1,0,0,0.5
+place H3corr2_U z=16044.547380000002
+solenoid H3corr3_U coil=Hcorr3_C current=535.3 color=1,0,0,0.5
+place H3corr3_U z=16056.547379999998
+solenoid H4corr1_U coil=Hcorr1_C current=-535.3 color=0,0,1,0.5
+place H4corr1_U z=22799.76520000001
+solenoid H4corr2_U coil=Hcorr2_C current=-535.3 color=0,0,1,0.5
+place H4corr2_U z=22811.765200000005
+solenoid H4corr3_U coil=Hcorr3_C current=-535.3 color=0,0,1,0.5
+place H4corr3_U z=22823.76520000001
+solenoid H5corr1_U coil=Hcorr1_C current=535.3 color=1,0,0,0.5
+place H5corr1_U z=29599.74658000002
+solenoid H5corr2_U coil=Hcorr2_C current=535.3 color=1,0,0,0.5
+place H5corr2_U z=29611.74658000002
+solenoid H5corr3_U coil=Hcorr3_C current=535.3 color=1,0,0,0.5
+place H5corr3_U z=29623.746580000017
+solenoid H6corr1_U coil=Hcorr1_C current=-535.3 color=0,0,1,0.5
+place H6corr1_U z=36077.49940000002
+solenoid H6corr2_U coil=Hcorr2_C current=-535.3 color=0,0,1,0.5
+place H6corr2_U z=36089.49940000002
+solenoid H6corr3_U coil=Hcorr3_C current=-535.3 color=0,0,1,0.5
+place H6corr3_U z=36101.49940000002
+solenoid H7corr1_U coil=Hcorr1_C current=535.3 color=1,0,0,0.5
+place H7corr1_U z=42176.06623000003
+solenoid H7corr2_U coil=Hcorr2_C current=535.3 color=1,0,0,0.5
+place H7corr2_U z=42188.06623000003
+solenoid H7corr3_U coil=Hcorr3_C current=535.3 color=1,0,0,0.5
+place H7corr3_U z=42200.06623000003
+solenoid H8corr1_U coil=Hcorr1_C current=-535.3 color=0,0,1,0.5
+place H8corr1_U z=48140.485370000046
+solenoid H8corr2_U coil=Hcorr2_C current=-535.3 color=0,0,1,0.5
+place H8corr2_U z=48152.48537000004
+solenoid H8corr3_U coil=Hcorr3_C current=-535.3 color=0,0,1,0.5
+place H8corr3_U z=48164.48537000004
+solenoid H9corr1_U coil=Hcorr1_C current=535.3 color=1,0,0,0.5
+place H9corr1_U z=53906.97044000005
+solenoid H9corr2_U coil=Hcorr2_C current=535.3 color=1,0,0,0.5
+place H9corr2_U z=53918.97044000005
+solenoid H9corr3_U coil=Hcorr3_C current=535.3 color=1,0,0,0.5
+place H9corr3_U z=53930.97044000005
+solenoid H10corr1_U coil=Hcorr1_C current=-535.3 color=0,0,1,0.5
+place H10corr1_U z=59688.173280000046
+solenoid H10corr2_U coil=Hcorr2_C current=-535.3 color=0,0,1,0.5
+place H10corr2_U z=59700.173280000046
+solenoid H10corr3_U coil=Hcorr3_C current=-535.3 color=0,0,1,0.5
+place H10corr3_U z=59712.173280000046
+solenoid H1corr1_U coil=Hcorr1_C current=535.3 color=1,0,0,0.5
+place H1corr1_U z=3683.3626900000004
+solenoid H1corr2_U coil=Hcorr2_C current=535.3 color=1,0,0,0.5
+place H1corr2_U z=3671.3626900000004
+solenoid H1corr3_U coil=Hcorr3_C current=535.3 color=1,0,0,0.5
+place H1corr3_U z=3659.3626900000004
+solenoid H2corr1_U coil=Hcorr1_C current=-535.3 color=0,0,1,0.5
+place H2corr1_U z=10670.547379999998
+solenoid H2corr2_U coil=Hcorr2_C current=-535.3 color=0,0,1,0.5
+place H2corr2_U z=10658.547379999998
+solenoid H2corr3_U coil=Hcorr3_C current=-535.3 color=0,0,1,0.5
+place H2corr3_U z=10646.547379999998
+solenoid H3corr1_U coil=Hcorr1_C current=535.3 color=1,0,0,0.5
+place H3corr1_U z=17437.765199999998
+solenoid H3corr2_U coil=Hcorr2_C current=535.3 color=1,0,0,0.5
+place H3corr2_U z=17425.765199999998
+solenoid H3corr3_U coil=Hcorr3_C current=535.3 color=1,0,0,0.5
+place H3corr3_U z=17413.7652
+solenoid H4corr1_U coil=Hcorr1_C current=-535.3 color=0,0,1,0.5
+place H4corr1_U z=24237.746580000006
+solenoid H4corr2_U coil=Hcorr2_C current=-535.3 color=0,0,1,0.5
+place H4corr2_U z=24225.74658000001
+solenoid H4corr3_U coil=Hcorr3_C current=-535.3 color=0,0,1,0.5
+place H4corr3_U z=24213.74658000001
+solenoid H5corr1_U coil=Hcorr1_C current=535.3 color=1,0,0,0.5
+place H5corr1_U z=30715.499400000015
+solenoid H5corr2_U coil=Hcorr2_C current=535.3 color=1,0,0,0.5
+place H5corr2_U z=30703.499400000015
+solenoid H5corr3_U coil=Hcorr3_C current=535.3 color=1,0,0,0.5
+place H5corr3_U z=30691.49940000002
+solenoid H6corr1_U coil=Hcorr1_C current=-535.3 color=0,0,1,0.5
+place H6corr1_U z=36814.066230000026
+solenoid H6corr2_U coil=Hcorr2_C current=-535.3 color=0,0,1,0.5
+place H6corr2_U z=36802.066230000026
+solenoid H6corr3_U coil=Hcorr3_C current=-535.3 color=0,0,1,0.5
+place H6corr3_U z=36790.06623000002
+solenoid H7corr1_U coil=Hcorr1_C current=535.3 color=1,0,0,0.5
+place H7corr1_U z=42778.485370000024
+solenoid H7corr2_U coil=Hcorr2_C current=535.3 color=1,0,0,0.5
+place H7corr2_U z=42766.485370000024
+solenoid H7corr3_U coil=Hcorr3_C current=535.3 color=1,0,0,0.5
+place H7corr3_U z=42754.485370000024
+solenoid H8corr1_U coil=Hcorr1_C current=-535.3 color=0,0,1,0.5
+place H8corr1_U z=48544.970440000034
+solenoid H8corr2_U coil=Hcorr2_C current=-535.3 color=0,0,1,0.5
+place H8corr2_U z=48532.97044000004
+solenoid H8corr3_U coil=Hcorr3_C current=-535.3 color=0,0,1,0.5
+place H8corr3_U z=48520.97044000004
+solenoid H9corr1_U coil=Hcorr1_C current=535.3 color=1,0,0,0.5
+place H9corr1_U z=54326.17328000004
+solenoid H9corr2_U coil=Hcorr2_C current=535.3 color=1,0,0,0.5
+place H9corr2_U z=54314.17328000004
+solenoid H9corr3_U coil=Hcorr3_C current=535.3 color=1,0,0,0.5
+place H9corr3_U z=54302.17328000004
+solenoid H10corr1_U coil=Hcorr1_C current=-535.3 color=0,0,1,0.5
+place H10corr1_U z=60079.18305000004
+solenoid H10corr2_U coil=Hcorr2_C current=-535.3 color=0,0,1,0.5
+place H10corr2_U z=60067.183050000036
+solenoid H10corr3_U coil=Hcorr3_C current=-535.3 color=0,0,1,0.5
+place H10corr3_U z=60055.183050000036
+                
+solenoid MU1_1 coil=M_C current=34.07907333777548 color=1,0,1,1
+place MU1_1 z=1000.0
+solenoid MU1_2 coil=M_C current=3.3219755405093148 color=1,0,1,1
+place MU1_2 z=1600.0
+solenoid MU1_3 coil=M_C current=51.652979865357764 color=1,0,1,1
+place MU1_3 z=1900.0000000000005
+solenoid MU2_1 coil=M_C current=-5.669527521162636 color=1,0,1,1
+place MU2_1 z=61185.183050000036
+solenoid MU2_2 coil=M_C current=-0.36462623842110903 color=1,0,1,1
+place MU2_2 z=60585.183050000036
+solenoid MU2_3 coil=M_C current=-3.740582725098888 color=1,0,1,1
+place MU2_3 z=60285.183050000036
+                
+solenoid MD1_1 coil=M_C current=29.111657748265788 color=1,0,1,1
+place MD1_1 z=3889.3626900000004
+solenoid MD1_2 coil=M_C current=7.770668698322591 color=1,0,1,1
+place MD1_2 z=4439.36269
+solenoid MD1_3 coil=M_C current=2.0780735138438775 color=1,0,1,1
+place MD1_3 z=4989.36269
+solenoid MD1_4 coil=M_C current=10.49900954085786 color=1,0,1,1
+place MD1_4 z=5539.362689999999
+solenoid MD1_5 coil=M_C current=-7.495575151591984 color=1,0,1,1
+place MD1_5 z=6089.36269
+solenoid MD1_6 coil=M_C current=7.95373971302427 color=1,0,1,1
+place MD1_6 z=6639.362690000001
+solenoid MD1_7 coil=M_C current=-11.816292655746388 color=1,0,1,1
+place MD1_7 z=7189.36269
+solenoid MD1_8 coil=M_C current=-2.4743724994023184 color=1,0,1,1
+place MD1_8 z=7739.36269
+solenoid MD1_9 coil=M_C current=-9.754001590741128 color=1,0,1,1
+place MD1_9 z=8289.36269
+solenoid MD1_10 coil=M_C current=-38.405798160744546 color=1,0,1,1
+place MD1_10 z=8839.36269
+solenoid MD2_1 coil=M_C current=-28.75291932501496 color=1,0,1,1
+place MD2_1 z=10876.547379999996
+solenoid MD2_2 coil=M_C current=-5.10160776559983 color=1,0,1,1
+place MD2_2 z=11426.547379999995
+solenoid MD2_3 coil=M_C current=-10.18166836971315 color=1,0,1,1
+place MD2_3 z=11976.547379999996
+solenoid MD2_4 coil=M_C current=-5.363069453702374 color=1,0,1,1
+place MD2_4 z=12526.547379999996
+solenoid MD2_5 coil=M_C current=7.639264017480231 color=1,0,1,1
+place MD2_5 z=13076.547379999998
+solenoid MD2_6 coil=M_C current=-7.899052061165514 color=1,0,1,1
+place MD2_6 z=13626.547379999996
+solenoid MD2_7 coil=M_C current=5.739264071854043 color=1,0,1,1
+place MD2_7 z=14176.547379999996
+solenoid MD2_8 coil=M_C current=11.250204071335906 color=1,0,1,1
+place MD2_8 z=14726.547379999996
+solenoid MD2_9 coil=M_C current=5.818381929582298 color=1,0,1,1
+place MD2_9 z=15276.547379999996
+solenoid MD2_10 coil=M_C current=33.81469975810126 color=1,0,1,1
+place MD2_10 z=15826.547379999998
+solenoid MD3_1 coil=M_C current=21.90186401612319 color=1,0,1,1
+place MD3_1 z=17643.765200000005
+solenoid MD3_2 coil=M_C current=6.320592677788482 color=1,0,1,1
+place MD3_2 z=18193.765200000005
+solenoid MD3_3 coil=M_C current=12.009145546441621 color=1,0,1,1
+place MD3_3 z=18743.7652
+solenoid MD3_4 coil=M_C current=-1.3421215151747294 color=1,0,1,1
+place MD3_4 z=19293.765200000005
+solenoid MD3_5 coil=M_C current=-1.5780337875156931 color=1,0,1,1
+place MD3_5 z=19843.765200000005
+solenoid MD3_6 coil=M_C current=1.6424583889103515 color=1,0,1,1
+place MD3_6 z=20393.765200000005
+solenoid MD3_7 coil=M_C current=1.4509902530049335 color=1,0,1,1
+place MD3_7 z=20943.765200000005
+solenoid MD3_8 coil=M_C current=-13.465906659415078 color=1,0,1,1
+place MD3_8 z=21493.7652
+solenoid MD3_9 coil=M_C current=-7.342993609800253 color=1,0,1,1
+place MD3_9 z=22043.765200000005
+solenoid MD3_10 coil=M_C current=-26.30828332018152 color=1,0,1,1
+place MD3_10 z=22593.765200000005
+solenoid MD4_1 coil=M_C current=-15.431556230093507 color=1,0,1,1
+place MD4_1 z=24443.746580000014
+solenoid MD4_2 coil=M_C current=-9.611600087960788 color=1,0,1,1
+place MD4_2 z=24993.746580000014
+solenoid MD4_3 coil=M_C current=-0.8383559110788232 color=1,0,1,1
+place MD4_3 z=25543.74658000001
+solenoid MD4_4 coil=M_C current=-7.075477675647452 color=1,0,1,1
+place MD4_4 z=26093.746580000014
+solenoid MD4_5 coil=M_C current=2.3981197230759586 color=1,0,1,1
+place MD4_5 z=26643.746580000014
+solenoid MD4_6 coil=M_C current=-2.5745684617479547 color=1,0,1,1
+place MD4_6 z=27193.746580000014
+solenoid MD4_7 coil=M_C current=8.082573316056695 color=1,0,1,1
+place MD4_7 z=27743.74658000001
+solenoid MD4_8 coil=M_C current=1.014213731399288 color=1,0,1,1
+place MD4_8 z=28293.74658000001
+solenoid MD4_9 coil=M_C current=12.269454669895454 color=1,0,1,1
+place MD4_9 z=28843.746580000014
+solenoid MD4_10 coil=M_C current=20.704478284982653 color=1,0,1,1
+place MD4_10 z=29393.746580000014
+solenoid MD5_1 coil=M_C current=15.50829970461758 color=1,0,1,1
+place MD5_1 z=30921.499400000022
+solenoid MD5_2 coil=M_C current=9.913449024277261 color=1,0,1,1
+place MD5_2 z=31471.499400000022
+solenoid MD5_3 coil=M_C current=2.2073513529462976 color=1,0,1,1
+place MD5_3 z=32021.49940000002
+solenoid MD5_4 coil=M_C current=1.0747809258483876 color=1,0,1,1
+place MD5_4 z=32571.499400000022
+solenoid MD5_5 coil=M_C current=-7.582640563326531 color=1,0,1,1
+place MD5_5 z=33121.49940000002
+solenoid MD5_6 coil=M_C current=7.746929031823667 color=1,0,1,1
+place MD5_6 z=33671.49940000002
+solenoid MD5_7 coil=M_C current=-1.145990558767439 color=1,0,1,1
+place MD5_7 z=34221.49940000003
+solenoid MD5_8 coil=M_C current=-2.407496936612131 color=1,0,1,1
+place MD5_8 z=34771.49940000002
+solenoid MD5_9 coil=M_C current=-11.049148885114635 color=1,0,1,1
+place MD5_9 z=35321.49940000002
+solenoid MD5_10 coil=M_C current=-17.641089016344765 color=1,0,1,1
+place MD5_10 z=35871.49940000002
+solenoid MD6_1 coil=M_C current=-15.896704333473627 color=1,0,1,1
+place MD6_1 z=37020.066230000026
+solenoid MD6_2 coil=M_C current=-9.654794824212937 color=1,0,1,1
+place MD6_2 z=37570.06623000003
+solenoid MD6_3 coil=M_C current=-2.797751134653994 color=1,0,1,1
+place MD6_3 z=38120.066230000026
+solenoid MD6_4 coil=M_C current=-2.2902786051365074 color=1,0,1,1
+place MD6_4 z=38670.066230000026
+solenoid MD6_5 coil=M_C current=7.590003301306175 color=1,0,1,1
+place MD6_5 z=39220.06623000002
+solenoid MD6_6 coil=M_C current=-7.563888983408606 color=1,0,1,1
+place MD6_6 z=39770.066230000026
+solenoid MD6_7 coil=M_C current=2.266121493386907 color=1,0,1,1
+place MD6_7 z=40320.06623000003
+solenoid MD6_8 coil=M_C current=2.7683276213206307 color=1,0,1,1
+place MD6_8 z=40870.066230000026
+solenoid MD6_9 coil=M_C current=9.550587179682509 color=1,0,1,1
+place MD6_9 z=41420.066230000026
+solenoid MD6_10 coil=M_C current=15.71358487210756 color=1,0,1,1
+place MD6_10 z=41970.06623000002
+solenoid MD7_1 coil=M_C current=13.87171139351456 color=1,0,1,1
+place MD7_1 z=42984.48537000004
+solenoid MD7_2 coil=M_C current=7.74300996465068 color=1,0,1,1
+place MD7_2 z=43534.48537000004
+solenoid MD7_3 coil=M_C current=2.1430743564766717 color=1,0,1,1
+place MD7_3 z=44084.48537000004
+solenoid MD7_4 coil=M_C current=4.869856949198033 color=1,0,1,1
+place MD7_4 z=44634.48537000004
+solenoid MD7_5 coil=M_C current=-4.7427501037346245 color=1,0,1,1
+place MD7_5 z=45184.48537000003
+solenoid MD7_6 coil=M_C current=4.904887103931407 color=1,0,1,1
+place MD7_6 z=45734.48537000004
+solenoid MD7_7 coil=M_C current=-5.382408908897361 color=1,0,1,1
+place MD7_7 z=46284.48537000004
+solenoid MD7_8 coil=M_C current=-2.4434130716369795 color=1,0,1,1
+place MD7_8 z=46834.48537000004
+solenoid MD7_9 coil=M_C current=-9.084788356507474 color=1,0,1,1
+place MD7_9 z=47384.48537000004
+solenoid MD7_10 coil=M_C current=-16.70032507115389 color=1,0,1,1
+place MD7_10 z=47934.48537000003
+solenoid MD8_1 coil=M_C current=-12.815128360695166 color=1,0,1,1
+place MD8_1 z=48750.97044000005
+solenoid MD8_2 coil=M_C current=-7.428042025371942 color=1,0,1,1
+place MD8_2 z=49300.97044000005
+solenoid MD8_3 coil=M_C current=1.5768619761417524 color=1,0,1,1
+place MD8_3 z=49850.97044000005
+solenoid MD8_4 coil=M_C current=-5.752538447933559 color=1,0,1,1
+place MD8_4 z=50400.97044000004
+solenoid MD8_5 coil=M_C current=3.101508248837534 color=1,0,1,1
+place MD8_5 z=50950.97044000004
+solenoid MD8_6 coil=M_C current=-3.2855480975916325 color=1,0,1,1
+place MD8_6 z=51500.97044000005
+solenoid MD8_7 coil=M_C current=6.847347726303871 color=1,0,1,1
+place MD8_7 z=52050.97044000005
+solenoid MD8_8 coil=M_C current=-1.9935365097631788 color=1,0,1,1
+place MD8_8 z=52600.97044000005
+solenoid MD8_9 coil=M_C current=9.934117791205598 color=1,0,1,1
+place MD8_9 z=53150.97044000004
+solenoid MD8_10 coil=M_C current=18.06410815854812 color=1,0,1,1
+place MD8_10 z=53700.97044000004
+solenoid MD9_1 coil=M_C current=12.212406755168324 color=1,0,1,1
+place MD9_1 z=54532.173280000046
+solenoid MD9_2 coil=M_C current=5.817456777536307 color=1,0,1,1
+place MD9_2 z=55082.173280000046
+solenoid MD9_3 coil=M_C current=2.0353823431486724 color=1,0,1,1
+place MD9_3 z=55632.173280000046
+solenoid MD9_4 coil=M_C current=3.6849363005010187 color=1,0,1,1
+place MD9_4 z=56182.173280000046
+solenoid MD9_5 coil=M_C current=-4.13445172574256 color=1,0,1,1
+place MD9_5 z=56732.17328000004
+solenoid MD9_6 coil=M_C current=4.243575812050509 color=1,0,1,1
+place MD9_6 z=57282.173280000046
+solenoid MD9_7 coil=M_C current=-3.986262655911847 color=1,0,1,1
+place MD9_7 z=57832.173280000046
+solenoid MD9_8 coil=M_C current=-2.318428015995362 color=1,0,1,1
+place MD9_8 z=58382.173280000046
+solenoid MD9_9 coil=M_C current=-6.988528837636954 color=1,0,1,1
+place MD9_9 z=58932.173280000046
+solenoid MD9_10 coil=M_C current=-14.244461777251574 color=1,0,1,1
+place MD9_10 z=59482.17328000004
+                
+pillbox rf1_1 innerLength=250  maxGradient=35 frequency=0.1 innerRadius=160 phaseAcc=0  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf1_1 z=4164.362690000001
+pillbox rf1_2 innerLength=250  maxGradient=35 frequency=0.1 innerRadius=160 phaseAcc=0  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf1_2 z=4714.362690000001
+pillbox rf1_3 innerLength=250  maxGradient=35 frequency=0.1 innerRadius=160 phaseAcc=0  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf1_3 z=5264.362690000001
+pillbox rf1_4 innerLength=250  maxGradient=35 frequency=0.1 innerRadius=160 phaseAcc=0  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf1_4 z=5814.362689999999
+pillbox rf1_5 innerLength=250  maxGradient=33 frequency=0.001 innerRadius=160 phaseAcc=80  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf1_5 z=6364.36269
+pillbox rf1_6 innerLength=250  maxGradient=33 frequency=0.001 innerRadius=160 phaseAcc=80  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf1_6 z=6914.362690000001
+pillbox rf1_7 innerLength=250  maxGradient=33 frequency=0.001 innerRadius=160 phaseAcc=80  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf1_7 z=7464.362690000001
+pillbox rf1_8 innerLength=250  maxGradient=33 frequency=0.001 innerRadius=160 phaseAcc=80  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf1_8 z=8014.362690000001
+pillbox rf1_9 innerLength=250  maxGradient=33 frequency=0.001 innerRadius=160 phaseAcc=80  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf1_9 z=8564.36269
+pillbox rf2_1 innerLength=250  maxGradient=25 frequency=0.05 innerRadius=160 phaseAcc=0  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf2_1 z=11151.547379999996
+pillbox rf2_2 innerLength=250  maxGradient=25 frequency=0.05 innerRadius=160 phaseAcc=0  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf2_2 z=11701.547379999996
+pillbox rf2_3 innerLength=250  maxGradient=25 frequency=0.05 innerRadius=160 phaseAcc=0  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf2_3 z=12251.547379999996
+pillbox rf2_4 innerLength=250  maxGradient=25 frequency=0.05 innerRadius=160 phaseAcc=0  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf2_4 z=12801.547379999996
+pillbox rf2_5 innerLength=250  maxGradient=18 frequency=0.001 innerRadius=160 phaseAcc=80  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf2_5 z=13351.547379999998
+pillbox rf2_6 innerLength=250  maxGradient=18 frequency=0.001 innerRadius=160 phaseAcc=80  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf2_6 z=13901.547379999996
+pillbox rf2_7 innerLength=250  maxGradient=18 frequency=0.001 innerRadius=160 phaseAcc=80  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf2_7 z=14451.547379999998
+pillbox rf2_8 innerLength=250  maxGradient=18 frequency=0.001 innerRadius=160 phaseAcc=80  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf2_8 z=15001.547379999996
+pillbox rf2_9 innerLength=250  maxGradient=18 frequency=0.001 innerRadius=160 phaseAcc=80  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf2_9 z=15551.547379999996
+pillbox rf3_1 innerLength=250  maxGradient=19 frequency=0.05 innerRadius=160 phaseAcc=0  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf3_1 z=17918.7652
+pillbox rf3_2 innerLength=250  maxGradient=19 frequency=0.05 innerRadius=160 phaseAcc=0  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf3_2 z=18468.765200000005
+pillbox rf3_3 innerLength=250  maxGradient=19 frequency=0.05 innerRadius=160 phaseAcc=0  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf3_3 z=19018.7652
+pillbox rf3_4 innerLength=250  maxGradient=19 frequency=0.05 innerRadius=160 phaseAcc=0  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf3_4 z=19568.765200000005
+pillbox rf3_5 innerLength=250  maxGradient=18 frequency=0.001 innerRadius=160 phaseAcc=80  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf3_5 z=20118.7652
+pillbox rf3_6 innerLength=250  maxGradient=18 frequency=0.001 innerRadius=160 phaseAcc=80  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf3_6 z=20668.7652
+pillbox rf3_7 innerLength=250  maxGradient=18 frequency=0.001 innerRadius=160 phaseAcc=80  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf3_7 z=21218.765200000005
+pillbox rf3_8 innerLength=250  maxGradient=18 frequency=0.001 innerRadius=160 phaseAcc=80  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf3_8 z=21768.7652
+pillbox rf3_9 innerLength=250  maxGradient=18 frequency=0.001 innerRadius=160 phaseAcc=80  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf3_9 z=22318.765200000005
+pillbox rf4_1 innerLength=250  maxGradient=15 frequency=0.05 innerRadius=160 phaseAcc=0  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf4_1 z=24718.746580000014
+pillbox rf4_2 innerLength=250  maxGradient=15 frequency=0.05 innerRadius=160 phaseAcc=0  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf4_2 z=25268.746580000014
+pillbox rf4_3 innerLength=250  maxGradient=15 frequency=0.05 innerRadius=160 phaseAcc=0  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf4_3 z=25818.74658000001
+pillbox rf4_4 innerLength=250  maxGradient=15 frequency=0.05 innerRadius=160 phaseAcc=0  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf4_4 z=26368.746580000014
+pillbox rf4_5 innerLength=250  maxGradient=25 frequency=0.001 innerRadius=160 phaseAcc=70  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf4_5 z=26918.74658000001
+pillbox rf4_6 innerLength=250  maxGradient=25 frequency=0.001 innerRadius=160 phaseAcc=70  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf4_6 z=27468.746580000014
+pillbox rf4_7 innerLength=250  maxGradient=25 frequency=0.001 innerRadius=160 phaseAcc=70  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf4_7 z=28018.74658000001
+pillbox rf4_8 innerLength=250  maxGradient=25 frequency=0.001 innerRadius=160 phaseAcc=70  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf4_8 z=28568.74658000001
+pillbox rf4_9 innerLength=250  maxGradient=25 frequency=0.001 innerRadius=160 phaseAcc=70  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf4_9 z=29118.746580000014
+pillbox rf5_1 innerLength=250  maxGradient=30 frequency=0.02 innerRadius=160 phaseAcc=180  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf5_1 z=31196.499400000022
+pillbox rf5_2 innerLength=250  maxGradient=30 frequency=0.02 innerRadius=160 phaseAcc=180  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf5_2 z=31746.499400000022
+pillbox rf5_3 innerLength=250  maxGradient=30 frequency=0.02 innerRadius=160 phaseAcc=180  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf5_3 z=32296.499400000015
+pillbox rf5_4 innerLength=250  maxGradient=50 frequency=0.01 innerRadius=160 phaseAcc=9  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf5_4 z=32846.49940000002
+pillbox rf5_5 innerLength=250  maxGradient=50 frequency=0.01 innerRadius=160 phaseAcc=9  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf5_5 z=33396.499400000015
+pillbox rf5_6 innerLength=250  maxGradient=50 frequency=0.01 innerRadius=160 phaseAcc=9  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf5_6 z=33946.49940000002
+pillbox rf5_7 innerLength=250  maxGradient=50 frequency=0.01 innerRadius=160 phaseAcc=9  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf5_7 z=34496.49940000002
+pillbox rf5_8 innerLength=250  maxGradient=50 frequency=0.01 innerRadius=160 phaseAcc=9  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf5_8 z=35046.49940000002
+pillbox rf5_9 innerLength=250  maxGradient=50 frequency=0.01 innerRadius=160 phaseAcc=9  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf5_9 z=35596.49940000002
+pillbox rf6_1 innerLength=250  maxGradient=40 frequency=0.01 innerRadius=160 phaseAcc=180  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf6_1 z=37295.066230000026
+pillbox rf6_2 innerLength=250  maxGradient=40 frequency=0.01 innerRadius=160 phaseAcc=180  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf6_2 z=37845.066230000026
+pillbox rf6_3 innerLength=250  maxGradient=40 frequency=0.01 innerRadius=160 phaseAcc=180  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf6_3 z=38395.066230000026
+pillbox rf6_4 innerLength=250  maxGradient=30 frequency=0.01 innerRadius=160 phaseAcc=0  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf6_4 z=38945.066230000026
+pillbox rf6_5 innerLength=250  maxGradient=30 frequency=0.01 innerRadius=160 phaseAcc=0  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf6_5 z=39495.06623000002
+pillbox rf6_6 innerLength=250  maxGradient=30 frequency=0.01 innerRadius=160 phaseAcc=0  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf6_6 z=40045.066230000026
+pillbox rf6_7 innerLength=250  maxGradient=30 frequency=0.01 innerRadius=160 phaseAcc=0  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf6_7 z=40595.066230000026
+pillbox rf6_8 innerLength=250  maxGradient=30 frequency=0.01 innerRadius=160 phaseAcc=0  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf6_8 z=41145.066230000026
+pillbox rf6_9 innerLength=250  maxGradient=30 frequency=0.01 innerRadius=160 phaseAcc=0  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf6_9 z=41695.066230000026
+pillbox rf7_1 innerLength=250  maxGradient=20 frequency=0.005 innerRadius=160 phaseAcc=0  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf7_1 z=43259.48537000004
+pillbox rf7_2 innerLength=250  maxGradient=20 frequency=0.005 innerRadius=160 phaseAcc=0  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf7_2 z=43809.48537000004
+pillbox rf7_3 innerLength=250  maxGradient=20 frequency=0.005 innerRadius=160 phaseAcc=0  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf7_3 z=44359.48537000004
+pillbox rf7_4 innerLength=250  maxGradient=15 frequency=0.005 innerRadius=160 phaseAcc=15  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf7_4 z=44909.48537000003
+pillbox rf7_5 innerLength=250  maxGradient=15 frequency=0.005 innerRadius=160 phaseAcc=15  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf7_5 z=45459.48537000003
+pillbox rf7_6 innerLength=250  maxGradient=15 frequency=0.005 innerRadius=160 phaseAcc=15  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf7_6 z=46009.48537000004
+pillbox rf7_7 innerLength=250  maxGradient=15 frequency=0.005 innerRadius=160 phaseAcc=15  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf7_7 z=46559.48537000004
+pillbox rf7_8 innerLength=250  maxGradient=15 frequency=0.005 innerRadius=160 phaseAcc=15  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf7_8 z=47109.48537000004
+pillbox rf7_9 innerLength=250  maxGradient=15 frequency=0.005 innerRadius=160 phaseAcc=15  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf7_9 z=47659.48537000003
+pillbox rf8_1 innerLength=250  maxGradient=25 frequency=0.005 innerRadius=160 phaseAcc=0  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf8_1 z=49025.97044000004
+pillbox rf8_2 innerLength=250  maxGradient=25 frequency=0.005 innerRadius=160 phaseAcc=0  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf8_2 z=49575.97044000005
+pillbox rf8_3 innerLength=250  maxGradient=25 frequency=0.005 innerRadius=160 phaseAcc=0  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf8_3 z=50125.97044000005
+pillbox rf8_4 innerLength=250  maxGradient=12 frequency=0.005 innerRadius=160 phaseAcc=30  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf8_4 z=50675.97044000004
+pillbox rf8_5 innerLength=250  maxGradient=12 frequency=0.005 innerRadius=160 phaseAcc=30  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf8_5 z=51225.97044000004
+pillbox rf8_6 innerLength=250  maxGradient=12 frequency=0.005 innerRadius=160 phaseAcc=30  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf8_6 z=51775.97044000004
+pillbox rf8_7 innerLength=250  maxGradient=12 frequency=0.005 innerRadius=160 phaseAcc=30  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf8_7 z=52325.97044000005
+pillbox rf8_8 innerLength=250  maxGradient=12 frequency=0.005 innerRadius=160 phaseAcc=30  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf8_8 z=52875.97044000005
+pillbox rf8_9 innerLength=250  maxGradient=12 frequency=0.005 innerRadius=160 phaseAcc=30  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf8_9 z=53425.97044000004
+pillbox rf9_1 innerLength=250  maxGradient=100 frequency=0.004 innerRadius=160 phaseAcc=180  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf9_1 z=54807.173280000046
+pillbox rf9_2 innerLength=250  maxGradient=11 frequency=0.005 innerRadius=160 phaseAcc=8  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf9_2 z=55357.173280000046
+pillbox rf9_3 innerLength=250  maxGradient=11 frequency=0.005 innerRadius=160 phaseAcc=8  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf9_3 z=55907.173280000046
+pillbox rf9_4 innerLength=250  maxGradient=11 frequency=0.005 innerRadius=160 phaseAcc=8  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf9_4 z=56457.17328000004
+pillbox rf9_5 innerLength=250  maxGradient=11 frequency=0.005 innerRadius=160 phaseAcc=8  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf9_5 z=57007.17328000004
+pillbox rf9_6 innerLength=250  maxGradient=11 frequency=0.005 innerRadius=160 phaseAcc=8  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf9_6 z=57557.173280000046
+pillbox rf9_7 innerLength=250  maxGradient=11 frequency=0.005 innerRadius=160 phaseAcc=8  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf9_7 z=58107.173280000046
+pillbox rf9_8 innerLength=250  maxGradient=11 frequency=0.005 innerRadius=160 phaseAcc=8  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf9_8 z=58657.173280000046
+pillbox rf9_9 innerLength=250  maxGradient=11 frequency=0.005 innerRadius=160 phaseAcc=8  win1Thick=0 win2Thick=0 color=1,0.5,0.5,1
+place rf9_9 z=59207.17328000004
+                
+param kinetic_energy=123.4874061
+param ref_p=203.33247877337413
+
+zntuple output file=2208_Ver0.00_MatchingCell10_1000.txt format=FOR009.DAT zloop=0:$cell_end:$zstep referenceParticle=1
+reference particle=mu+ beamZ=0 referenceMomentum=$ref_p beamX=0.0 beamY=0.0 beamXp=0.0 beamYp=0.0 noEfield=0 noEloss=0
+beam ascii file=050625BeamInput_10000_4.04124T.txt beamZ=0.0 beamX=0.0 beamY=0.0 beamXp=0.0 beamYp=0.0 lastEvent=1000 # user provided file with particle data
+trackcuts keep=mu+
+
