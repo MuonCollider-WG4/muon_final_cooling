@@ -1,8 +1,8 @@
 output g4bl_log.txt
 g4ui when=4 "/vis/viewer/set/background 1 1 1"
-param disable=Decay   #Whether muons decay
+# param disable=Decay   #Whether muons decay
 param stochastics=1
-physics QGSP_BIC disable=$disable
+physics QGSP_BIC # disable=$disable
 param cell_end=62185.183050000036
 param zstep=50
 
